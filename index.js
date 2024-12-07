@@ -7,15 +7,15 @@ let message = ""
 let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
+let cards = [firstCard, secondCard]
 
-
-function starGame() {
-    rendertGame()
+function startGame() {
+    renderGame()
 }
 
-function rendertGame() {
+function renderGame() {
     sumEl.textContent = "Sum: " + sum
-    cardsEl.textContent = firstCard + " " + secondCard
+    cardsEl.textContent = cards[0] + " " + cards[1]
     if (sum <= 20) {
         message = "Do you want to draw a new card?"
     } else if (sum === 21) {
@@ -32,5 +32,5 @@ function newCard() {
    let card = 7
     sum += card
 
-rendertGame()
+renderGame()
 }
